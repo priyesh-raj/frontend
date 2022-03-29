@@ -1,0 +1,22 @@
+
+
+@mixin detail-form($justifyField, $justifyActionBtn){
+    flex:1;
+    @include flex-container(column);
+    div{
+        @include flex-container(row);
+        justify-content: $justifyField;
+        p{
+            margin: 5px;
+        }
+    }
+    section#action-bar{
+        @include flex-container(row);
+        align-self: flex-end;
+        justify-content: $justifyActionBtn;
+    
+        button{
+            margin: 0 2px;
+        }
+    }
+}

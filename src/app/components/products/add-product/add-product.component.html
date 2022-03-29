@@ -1,0 +1,68 @@
+<article class="overlay">
+    <mat-card id="page-view">
+        <mat-card-header>
+            <mat-card-title>
+                    <mat-icon aria-hidden='false'>add</mat-icon>
+                    <p>Add Product Details</p>
+            </mat-card-title>
+            <span>
+                <button mat-icon-button aria-hidden='false' (click)="closeOverlay()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </span> 
+        </mat-card-header>
+        <mat-card-content>
+            <form id="item-detail" [formGroup]="itemDetail" (ngSubmit)="onSubmit()">
+                <div id="input-field">
+                    <!-- <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Product Id:</mat-label>
+                            <input matInput  formControlName="_id">
+                        </mat-form-field>
+                    </p> -->
+                    <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Product Name</mat-label>
+                            <input matInput formControlName="name">
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Product Category</mat-label>
+                            <input matInput  formControlName="category">
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Rate</mat-label>
+                            <input matInput  formControlName="rate">
+                        </mat-form-field>
+                    </p>
+                    <p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Inventory Count</mat-label>
+                            <input matInput  formControlName="quantity">
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div id="textarea-field">
+                    <p id="textarea">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Product Description</mat-label>
+                            <textarea matInput formControlName="desc"></textarea>
+                        </mat-form-field>
+                    </p>
+                    <!-- <p>Product Description: {{item.desc}}</p> -->
+                </div>
+                <section id="action-bar">
+                    <button
+                    mat-raised-button 
+                    color="accent" 
+                    (click)="itemDetail.reset()"
+                    >Reset</button>
+                    <button mat-raised-button type="submit" color="primary">Add</button>
+                </section>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</article>

@@ -1,0 +1,60 @@
+<article>
+    <app-product-detail
+    *ngIf="_detailOverlayFlag | async"  
+     [item]="displayProduct"
+     (close)="hideOverlay('detail')"
+     #detailOverlay
+     ></app-product-detail>
+    <app-add-product
+        *ngIf="_addProductOverlayFlag | async"
+        (close)="hideOverlay('add')"
+        #addOverlay
+    ></app-add-product>
+</article>
+
+<article id="page-content">
+    <header>
+        <h3>Product View</h3>
+    </header>
+    <main>
+        <section id="add-product">
+            <button
+             mat-raised-button 
+             id="add-product" 
+             color="primary"
+             (click)="displayOverlay('addProduct')"
+            >Add New Product</button>
+        </section>
+        <section id="product-list">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Items:</mat-card-title>
+                </mat-card-header>
+                <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+                <form id="search-bar">
+                    <mat-form-field appearance="standard">
+                        <mat-label>Search Product</mat-label>
+                        <input matInput type="text" placeholder="Enter Product Name" aria-label="Search Product"
+                            [formControl]="searchProduct" [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let op of filterOps$|async" [value]="op.name">
+                                {{op.name}}
+                            </mat-option>
+                        </mat-autocomplete> 
+                    </mat-form-field>
+                </form>
+                <section id="items-display-container">
+                    <div *ngFor="let product of filterOps$ | async" [id]="product._id">
+                        <app-item-card
+                         [item] = product 
+                         (showDetail)="displayOverlay($event)"
+                         ></app-item-card>
+                    </div>
+                </section>
+            </mat-card>
+        </section>
+    </main>
+    <footer>
+        <mat-card>Footer Note</mat-card>
+    </footer>
+</article>

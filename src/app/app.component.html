@@ -1,0 +1,41 @@
+<!-- <router-outlet name="overlay"></router-outlet> -->
+<!-- <router-outlet></router-outlet> -->
+
+
+<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eius at sit saepe veniam laudantium voluptatum fuga illum vitae magni? Vitae laborum, autem placeat ut quas reprehenderit ipsa tenetur sint.</p>
+<app-add-product></app-add-product> -->
+<!-- <app-product-detail></app-product-detail> -->
+
+<article class="page-view">
+    <article id="page-header">
+        <header>
+            <h3 class="brand">brand</h3>
+        </header>
+        <nav>
+            <ul id="nav-link">
+                <li [routerLink]="['/','home']" routerLinkActive="active-nav">
+                    <mat-icon aria-hidden='false'>home</mat-icon><span>Home</span>
+                </li>
+                <li routerLink="/products" routerLinkActive="active-nav">
+                    <mat-icon aria-hidden='false'>list</mat-icon><span>Products</span>
+                </li>
+                <li routerLink="/orders" routerLinkActive="active-nav">
+                    <mat-icon aria-hidden='false'>shopping_bag</mat-icon><span>Orders</span>
+                </li>
+                <li routerLink="/tickets" routerLinkActive="active-nav">
+                    <mat-icon aria-hidden='false'>source</mat-icon><span>Tickets</span>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <button mat-button color="primary">
+                <mat-icon aria-hidden='false'>logout</mat-icon>Log Out
+            </button>
+        </section>
+    </article>
+    
+    <article id="router-outlet">
+        <router-outlet></router-outlet>
+    </article>
+    
+</article>

@@ -1,0 +1,81 @@
+[{
+  "_id": "6106675cf49972db52708bd1",
+  "name": "Lil Crunche Veggie dip",
+  "category": "Baby Food",
+  "rate": "$2.58",
+  "quantity": 84,
+  "desc": "Occaecat pariatur proident qui aliqua ut dolor minim amet. Occaecat dolore consequat sint sit pariatur. Sunt do deserunt mollit ullamco pariatur magna exercitation incididunt quis aliquip magna mollit. Sit excepteur ipsum dolore irure. Ut laboris quis ea esse. Culpa tempor id voluptate sunt dolor sunt ipsum non esse est quis duis.\r\n",
+  "img": "/assets/product image/Lil Crunche Veggie dip.jpg"
+},
+{ 
+  "_id": "6106675c660dd2d0f686a212",
+  "name": "Single Grain Rice",
+  "category": "Baby Food",
+  "rate": "$4.97",
+  "quantity": 38,
+  "desc": "Ut ea occaecat excepteur adipisicing. Pariatur anim ullamco cillum veniam laboris proident deserunt nostrud adipisicing reprehenderit aute voluptate. Minim eu fugiat enim est nisi ut incididunt.\r\n",
+  "img": "/assets/product image/Single Grain Rice.jpg"
+},
+{
+  "_id": "6106675cf70253b01bb670fc",
+  "name": "Vegetable Oil",
+  "category": "Baking&Mixes",
+  "rate": "$2.55",
+  "quantity": 87,
+  "desc": "Do dolor culpa veniam adipisicing aliquip tempor qui exercitation duis adipisicing laboris. Ullamco enim nostrud velit duis mollit anim duis. Non sit culpa dolor consectetur esse aliquip ex. Excepteur eu qui aute amet velit. Proident cupidatat dolor consequat occaecat elit. Aliquip est dolore veniam commodo quis dolor nisi anim ut deserunt exercitation commodo.\r\n",
+  "img": "/assets/product image/Vegetable Oil.png"
+},
+{
+  "_id": "6106675c9a38150365e5fae5",
+  "name": "Miniature Party Bag",
+  "category": "Candy&Gum",
+  "rate": "$8.34",
+  "quantity": 70,
+  "desc": "Duis dolor ullamco excepteur do eu nostrud ut mollit ullamco ea nisi laborum commodo. Deserunt sint est culpa officia consectetur dolor cillum aliquip ea mollit. Eiusmod aliquip ad eiusmod nisi minim. Voluptate consequat incididunt nulla consectetur nisi. Excepteur culpa occaecat anim est nostrud elit. Velit reprehenderit magna do ad incididunt amet. Deserunt elit ad amet ullamco nisi duis cillum.\r\n",
+  "img": "/assets/product image/Miniature Party Bag.jpg"
+},
+{
+  "_id": "6106675c19b922714583da09",
+  "name": "Rocky Road Ice Cream Tub",
+  "category": "Frozen Food",
+  "rate": "$7.74",
+  "quantity": 43,
+  "desc": "Eu non adipisicing in nisi enim ipsum ut aliquip sit velit. Et deserunt amet labore dolore Lorem elit nulla mollit deserunt irure. Est laboris ex adipisicing ex anim irure exercitation et esse aliquip ipsum commodo excepteur fugiat. Officia ex nisi irure enim nostrud excepteur anim excepteur minim. Ipsum dolore incididunt do ad commodo tempor sint aliquip consequat incididunt eiusmod magna. Incididunt quis nisi eiusmod nulla pariatur mollit non cillum sunt amet adipisicing ipsum quis. Velit do irure aliquip nulla proident labore et.\r\n",
+  "img": "/assets/product image/Rocky Road Ice Cream Tub.jpg"
+},
+{
+  "_id": "6106675c56603c67f33e3e5d",
+  "name": "Candy Bar",
+  "category": "Candy&Gum",
+  "rate": "$4.31",
+  "quantity": 84,
+  "desc": "Veniam exercitation in officia aliquip nulla aliqua minim aliquip duis eiusmod esse. Ut cillum sit Lorem ullamco. Magna dolor eiusmod officia enim est id exercitation est ut cupidatat excepteur.\r\n",
+  "img": "/assets/product image/Candy Bar.jfif"
+},
+{
+  "_id": "6106675c62883da1e2716358",
+  "name": "Silk Dark Coffee",
+  "category": "Food&Beverage",
+  "rate": "$8.75",
+  "quantity": 88,
+  "desc": "Lorem laborum reprehenderit proident magna. Commodo commodo consequat ipsum id minim qui aliquip nisi est proident ad laboris mollit. Quis qui consectetur mollit amet. Minim consectetur proident cillum exercitation ullamco eu qui exercitation nisi incididunt reprehenderit do consectetur proident.\r\n",
+  "img": "/assets/product image/Silk Dark Coffee.jpg"
+},
+{
+  "_id": "6106675c31f7cc8d411f50df",
+  "name": "Whip Topping",
+  "category": "Frozen Food",
+  "rate": "$6.07",
+  "quantity": 36,
+  "desc": "Laboris elit fugiat est tempor magna duis anim qui esse. Aliquip ipsum nisi pariatur eu cillum labore cillum. Fugiat ipsum enim cupidatat dolor ullamco exercitation. Aute officia dolore incididunt voluptate dolore occaecat mollit ad laboris laboris exercitation sit sint.\r\n",
+  "img": "/assets/product image/Whip Topping.jfif"
+},
+{
+  "_id": "6106675c772e35cea00acc94",
+  "name": "Garlic Loaf",
+  "category": "Frozen Food",
+  "rate": "$6.53",
+  "quantity": 87,
+  "desc": "Ex laborum proident eu qui consequat minim eu est consectetur nulla. Consectetur non cupidatat eu officia mollit. Lorem ut nulla aliquip mollit cillum labore culpa exercitation laboris. Qui do pariatur velit nulla mollit eiusmod deserunt occaecat.\r\n",
+  "img": "/assets/product image/Garlic Loaf.jpg"
+}]

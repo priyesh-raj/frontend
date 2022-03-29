@@ -1,0 +1,82 @@
+<article class="overlay">
+    <article id="product-detail">
+        <header>
+            <span>
+                <h3>{{item.name}}</h3>
+                <p>{{item.category}}</p>
+            </span>
+            <span>
+                <button mat-icon-button aria-hidden='false' (click)="onClose()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </span>
+        </header>
+        <main>
+            <section id="item-detail">
+                <img src="{{item.img}}" alt="Product Image">
+                <form id="itemDetail-form" [formGroup]="itemDetail" (ngSubmit)="onSubmit()">
+                    <div id="input-field">
+                        <p>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Product Id:</mat-label>
+                                <input matInput placeholder="Placeholder" formControlName="_id" readonly>
+                                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                <!-- <mat-hint>Hint</mat-hint> -->
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Product Name:</mat-label>
+                                <input matInput placeholder="Placeholder" formControlName="name" [readonly]=readonlyMode>
+                                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                                <!-- <mat-hint>Hint</mat-hint> -->
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Product Category:</mat-label>
+                                <input matInput appDetailFormField formControlName="category" [readonly]=readonlyMode>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Rate</mat-label>
+                                <input matInput appDetailFormField formControlName="rate" [readonly]=readonlyMode>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Inventory Count</mat-label>
+                                <input matInput appDetailFormField formControlName="quantity" [readonly]=readonlyMode>
+                            </mat-form-field>
+                        </p>
+                    </div>
+                    <div id="textarea-field">
+                        <!-- <p id="textarea">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Product Description</mat-label>
+                                    <textarea matInput formControlName="desc"></textarea>
+                                </mat-form-field>
+                            </p> -->
+                        <p>Product Description: {{item.desc}}</p>
+                    </div>
+                    <section id="action-bar">
+                        <button mat-raised-button
+                            *ngIf="readonlyMode" 
+                            color="primary"
+                            (click)="readonlyMode = !readonlyMode"
+                            >Modify</button>
+                        <button mat-raised-button
+                            *ngIf="!readonlyMode"
+                            color="primary"
+                            type="submit"
+                            >Save</button>
+                        <button mat-raised-button 
+                            color="warn"
+                            >Delete</button>
+                    </section>
+                </form>
+            </section>
+        </main>
+    </article>
+</article>

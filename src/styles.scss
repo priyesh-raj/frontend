@@ -1,0 +1,47 @@
+
+// @use '~@angular/material' as mat;
+ 
+
+// @include mat.core();
+// $ProductApp-primary: mat.define-palette(mat.$light-blue-palette);
+// $ProductApp-accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
+
+
+// $ProductApp-warn: mat.define-palette(mat.$red-palette);
+
+
+// $ProductApp-theme: mat.define-light-theme((
+//   color: (
+//     primary: $ProductApp-primary,
+//     accent: $ProductApp-accent,
+//     warn: $ProductApp-warn,
+//   )
+// ));
+
+// @include mat.all-component-themes($ProductApp-theme);
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+
+html, body { height: 100%; width: 100%}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+// .brand{}
+
+.page-view{
+  // dont use
+  display: flex;
+  min-height: 100vh;
+}
+
+// .overlay{
+//   position: fixed;
+//   top: 2px;
+//   left: 2px;
+//   opacity: 100%;
+//   z-index: 1;
+  
+// }
+
+// .active-nav{
+//   background-color: lightcyan;
+// }

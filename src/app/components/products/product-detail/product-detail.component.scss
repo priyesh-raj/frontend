@@ -1,0 +1,61 @@
+@import '../../scss-partials/flex-row-contianer';
+@import '../../scss-partials/item-detail-form';
+
+article#product-detail{
+    display: flex;
+    flex-flow: column;
+    // min-height: 100%;
+    width: 80vw;
+    // height: 80vh;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    header{
+        @include flex-container(row);
+        margin-block-end: 5px;
+        justify-content: space-between;
+        span{
+            h3{
+                margin: 5px 0 1.5px 0;
+            }
+            p{
+                margin: 1.5px 0 5px 0;
+                font-size:smaller;
+                color: grey;
+            }
+        }
+
+    }
+}
+
+main{
+    // @include flex-container(row);
+    flex: 1; 
+
+   
+}
+
+
+section#item-detail{
+    flex: 1;
+    @include flex-container(row);
+    img{
+        width: 45%;
+        height: 40%;
+    }
+    
+}
+
+form#itemDetail-form{
+    @include detail-form(flex-end, flex-end);
+    
+    div#textarea-field{
+        p{
+            font-size: 0.8rem;
+            color: grey;
+            margin-block-end: 1rem;
+        }
+    }
+}

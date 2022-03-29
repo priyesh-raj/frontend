@@ -1,0 +1,80 @@
+@import '../../../../scss-partials/flex-row-contianer';
+
+article#page-content{
+    flex: 1;
+    padding: 5px;
+    background-color: lightcyan;
+    display: flex;
+    flex-flow: column;
+
+    header{
+        display: inline-block;
+        width: 100%;
+        background-color: white;
+        margin-block-start: 5px;
+        margin-block-end: 5px;
+        border-radius: 5px;
+         
+        h3{
+            padding: 5px;
+            font-weight: 550;
+            font-size: 1.2rem;
+
+        }
+    }
+    main{
+        flex : 1;
+        display: flex;
+        flex-flow: column;
+        section#add-product{
+            display: inline-block;
+            width: 100%;
+            margin-block-start: 5px;
+            margin-block-end: 5px;
+    
+            button#add-product{
+                width: 100%;
+            }
+        }
+
+        // section#product-list{
+        //     flex: 1;
+            
+        //     mat-card{
+        //         display: block;
+        //         margin-block-start: 5px;
+        //         margin-block-end: 5px;
+        //         min-height: 95%;
+        //         padding: 5px;
+        //         mat-card-title{
+        //             font-size: 1rem;
+        //             margin: 0px;
+        //         }
+
+        //         form{
+        //             min-width: 150px;
+        //             max-width: 500px;
+        //             width: 100%;
+        //             mat-form-field{
+        //                 width: 100%;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+    footer{
+        width: 100%;
+    }
+}
+
+
+section#items-display-container{
+    @include flex-container(row);
+
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+
+

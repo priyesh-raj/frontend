@@ -1,0 +1,7 @@
+
+@mixin flex-container($flex-direction, $width: 100%,$height: fit-content, $wrap: wrap){
+  display: flex;
+  flex-flow: $flex-direction $wrap;
+  width: $width;
+  height: $height;
+}
