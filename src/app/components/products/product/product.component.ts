@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
-import { IProduct } from 'src/models/product.model';
 import { ProductService } from '../../../services/product-service/product.service';
 
 import { BehaviorSubject, Observable } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
+import { IProduct } from 'src/app/models/product.model';
 
 
 
@@ -21,29 +21,32 @@ export class ProductComponent implements OnInit {
   displayProduct!: IProduct 
   searchProduct = new FormControl()
   productList!: IProduct[]
-  filterOps$: Observable<IProduct[]> = new BehaviorSubject<IProduct[]>([])
 
   constructor(private _productService: ProductService) { }
   
   ngOnInit(): void {
-    this._productService.productList$.subscribe(prods => {
-      this.productList = prods
+    // this._productService.productList$.subscribe(prods => {
+    //   this.productList = prods
+    // })
+    this._productService.getProductsList().subscribe({
+      next: (resp: IProduct[]) => {
+        this.productList = resp
+      } 
     })
-
-    this.filterInput()
+    // this.filterInput()
   }
 
-  filterInput(){
-    this.filterOps$ =  this.searchProduct.valueChanges
-    .pipe(
-        startWith(''),
-        map((a: string) : IProduct[] => {
-          return this.filter(a)
-    }))
-  }
-  filter(name: string): IProduct[]{
-    return this.productList.filter(x => x.name.toLowerCase().includes(name.toLowerCase()))
-  }
+  // filterInput(){
+  //   this.filterOps$ =  this.searchProduct.valueChanges
+  //   .pipe(
+  //       startWith(''),
+  //       map((a: string) : IProduct[] => {
+  //         return this.filter(a)
+  //   }))
+  // }
+  // filter(name: string): IProduct[]{
+  //   return this.productList.filter(x => x.name.toLowerCase().includes(name.toLowerCase()))
+  // }
 
   displayOverlay(eve : any) {
     
@@ -66,7 +69,7 @@ export class ProductComponent implements OnInit {
       if(eve === 'detail'){
         this._detailOverlayFlag.next(false)
         console.log(this.productList)
-        this.filterInput()
+        // this.filterInput()
       }else if(eve === 'add'){
          this._addProductOverlayFlag.next(false) 
       }else{

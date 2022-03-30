@@ -1,7 +1,8 @@
 import { Component, ElementRef, Input, OnInit, Output, ViewChild, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IProduct } from 'src/models/product.model';
+import { IProduct } from 'src/app/models/product.model';
+
 import { ProductService } from '../../../services/product-service/product.service';
 
 @Component({

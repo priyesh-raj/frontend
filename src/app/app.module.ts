@@ -12,6 +12,7 @@ import { AddProductComponent } from './components/products/add-product/add-produ
 import { Error404Component } from './components/error404/error404.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 import { AppMaterialModule } from './material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AppMaterialModule } from './material.module';
     AppRoutingModule,
     NoopAnimationsModule,
     AppMaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent], 

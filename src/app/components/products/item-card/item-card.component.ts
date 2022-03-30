@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
-import { IProduct } from 'src/models/product.model';
+import { IProduct } from 'src/app/models/product.model';
 
 
 

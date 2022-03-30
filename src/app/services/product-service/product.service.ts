@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { IProduct } from 'src/models/product.model';
+import { BehaviorSubject, Observable } from 'rxjs';
 
-import { map } from 'rxjs/operators';
+import { map, retry } from 'rxjs/operators';
 
 import products from '../../../assets/items.json'; 
+import { HttpClient } from '@angular/common/http';
+import { GET_PRODUCT } from 'src/app/constants/products';
+import { IProduct } from 'src/app/models/product.model';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,12 +15,18 @@ export class ProductService {
   // productList: IProduct[]
   productList$: BehaviorSubject<IProduct[]>
 
-  constructor() {
+  constructor(private _http: HttpClient) {
     this.productList$ = new BehaviorSubject<IProduct[]>(products)
   }
 
   getProduct(){
     return this.productList$
+  }
+
+  getProductsList(): Observable<IProduct[]> {
+    return this._http.get<IProduct[]>(GET_PRODUCT).pipe(
+      retry(1)
+    )
   }
 
   saveProduct(item: IProduct){

@@ -37,14 +37,14 @@
                         <input matInput type="text" placeholder="Enter Product Name" aria-label="Search Product"
                             [formControl]="searchProduct" [matAutocomplete]="auto">
                         <mat-autocomplete #auto="matAutocomplete">
-                            <mat-option *ngFor="let op of filterOps$|async" [value]="op.name">
+                            <mat-option *ngFor="let op of productList" [value]="op.name">
                                 {{op.name}}
                             </mat-option>
                         </mat-autocomplete> 
                     </mat-form-field>
                 </form>
                 <section id="items-display-container">
-                    <div *ngFor="let product of filterOps$ | async" [id]="product._id">
+                    <div *ngFor="let product of productList" [id]="product._id">
                         <app-item-card
                          [item] = product 
                          (showDetail)="displayOverlay($event)"
