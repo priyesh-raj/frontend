@@ -1,0 +1,6 @@
+<form [formGroup]="registerForm">
+    <mat-form-field>
+        <input matInput placeholder="Enter your email" formControlName="email">
+        <mat-error *ngIf="registerForm.get('email')?.invalid">{{getErrorMessage('email')}}</mat-error>
+    </mat-form-field>
+</form>

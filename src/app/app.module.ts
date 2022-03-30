@@ -13,6 +13,7 @@ import { Error404Component } from './components/error404/error404.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 import { AppMaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterUserComponent } from './components/register-user/register-user.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     AddProductComponent,
     Error404Component,
     LoginComponent,
+    RegisterUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     NoopAnimationsModule,
     AppMaterialModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent], 

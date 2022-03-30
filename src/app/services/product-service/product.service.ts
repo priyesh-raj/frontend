@@ -5,7 +5,7 @@ import { map, retry } from 'rxjs/operators';
 
 import products from '../../../assets/items.json'; 
 import { HttpClient } from '@angular/common/http';
-import { GET_PRODUCT } from 'src/app/constants/products';
+import { GET_PRODUCT } from 'src/app/constants/api-products';
 import { IProduct } from 'src/app/models/product.model';
 
 @Injectable({

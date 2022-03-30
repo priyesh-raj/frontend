@@ -4,10 +4,11 @@ import { AddProductComponent } from './components/products/add-product/add-produ
 import { Error404Component } from './components/error404/error404.component';
 import { ProductComponent } from './components/products/product/product.component';
 import { LoginComponent } from './components/authentication/login/login.component';
+import { RegisterUserComponent } from './components/register-user/register-user.component';
 
 const routes: Routes = [
   // {path: "additem", component: AddProductComponent, outlet: 'overlay'},
-  {path: "home", component: ProductComponent},
+  {path: "home", component: RegisterUserComponent},
   {path: "orders", redirectTo: "404"},
   {path: "tickets", redirectTo: "404"},
   {path: "products", component: ProductComponent},
