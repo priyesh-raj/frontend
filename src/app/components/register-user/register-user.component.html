@@ -1,6 +1,65 @@
-<form [formGroup]="registerForm">
-    <mat-form-field>
-        <input matInput placeholder="Enter your email" formControlName="email">
-        <mat-error *ngIf="registerForm.get('email')?.invalid">{{getErrorMessage('email')}}</mat-error>
-    </mat-form-field>
-</form>
+<section id="regsiter-form-section">
+  <header id="register-page-header">
+    <h3>Register New User</h3>
+    <span id="filler-span"></span>
+    <mat-icon (click)="onCloseIconClick()">close</mat-icon>
+  </header>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Enter your email"
+          formControlName="email"
+        />
+        <mat-error *ngIf="registerForm.get('email')?.invalid">{{
+          getErrorMessage("email")
+        }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Enter your password"
+          formControlName="password"
+          type="password"
+        />
+        <mat-error *ngIf="registerForm.get('password')?.invalid">
+          <p>{{ getErrorMessage("password") }}</p>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Re-enter your password"
+          formControlName="confirmPassword"
+          type="password"
+        />
+        <mat-error *ngIf="registerForm.get('confirmPassword')?.invalid"
+          >{{ getErrorMessage("confirmPassword") }}
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+  <footer>
+    <button
+      mat-raised-button
+      type="submit"
+      color="primary"
+      [disabled]="registerForm.invalid"
+    >
+      Submit
+    </button>
+    <button
+      mat-raised-button
+      type="submit"
+      color="accent"
+      [disabled]="!registerForm.dirty"
+    >
+      Reset
+    </button>
+  </footer>
+</section>

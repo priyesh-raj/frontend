@@ -1,0 +1,14 @@
+section[id="regsiter-form-section"] {
+  width: 50%;
+  outline: solid;
+}
+
+header[id="register-page-header"] {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  span {
+    flex: 1;
+  }
+}
